@@ -23,6 +23,7 @@
 /*-darwin-user
 /*-linux-user
 /*-bsd-user
+/*-win95-user
 /libdis*
 /libuser
 /linux-headers/asm

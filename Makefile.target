@@ -124,6 +124,18 @@ obj-y += gdbstub.o user-exec.o
 endif #CONFIG_BSD_USER
 
 #########################################################
+# WIN95 user emulator target
+
+ifdef CONFIG_WIN95_USER
+
+QEMU_CFLAGS+=-I$(SRC_PATH)/win95-user 
+
+obj-y += win95-user/
+obj-y += user-exec.o
+
+endif #CONFIG_WIN95_USER
+
+#########################################################
 # System emulator target
 ifdef CONFIG_SOFTMMU
 obj-y += arch_init.o cpus.o monitor.o gdbstub.o balloon.o ioport.o numa.o
